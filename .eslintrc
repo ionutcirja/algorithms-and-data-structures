@@ -1,11 +1,24 @@
 {
-  "parser": "babel-eslint",
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": "./"
+  },
+  "plugins": ["@typescript-eslint"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".ts"]
+      }
+    }
+  },
   "extends": [
-    "plugin:flowtype/recommended",
-    "airbnb"
-  ],
-  "plugins": [
-    "flowtype"
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript"
   ],
   "globals": {
     "document": true,
@@ -21,6 +34,7 @@
   },
   "rules": {
     "no-trailing-spaces": ["error", { "skipBlankLines": true }],
+    "import/no-unresolved": "off",
     "import/prefer-default-export": "off"
   }
 }

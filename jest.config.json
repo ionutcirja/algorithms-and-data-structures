@@ -1,0 +1,10 @@
+{
+  "verbose": true,
+  "clearMocks": true,
+  "restoreMocks": true,
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "queue/**/*.{ts,tsx}",
+    "!**/node_modules/**"
+  ]
+}
