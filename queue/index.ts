@@ -1,4 +1,4 @@
-type Queue = {
+export type Queue = {
   add: (item: any) => any;
   remove: () => any;
   peek: () => any;
