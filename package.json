@@ -5,9 +5,11 @@
     "lint": "eslint queue/**",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:watchAll": "jest --watchAll"
+    "test:watchAll": "jest --watchAll",
+    "check-types": "tsc"
   },
   "pre-commit": [
+    "check-types",
     "lint",
     "test"
   ],
